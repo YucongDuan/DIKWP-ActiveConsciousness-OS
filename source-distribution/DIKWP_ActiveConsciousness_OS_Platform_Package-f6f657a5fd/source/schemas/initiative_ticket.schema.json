@@ -1,0 +1,49 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "InitiativeTicket",
+  "type": "object",
+  "required": [
+    "ticket_id",
+    "trigger",
+    "proposed_move",
+    "action_grade",
+    "approval_required"
+  ],
+  "properties": {
+    "ticket_id": {
+      "type": "string"
+    },
+    "trigger": {
+      "type": "string"
+    },
+    "proposed_move": {
+      "type": "string"
+    },
+    "benefit": {
+      "type": "string"
+    },
+    "risk": {
+      "type": "string"
+    },
+    "reversibility": {
+      "type": "string"
+    },
+    "action_grade": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    "approval_required": {
+      "type": "boolean"
+    },
+    "fallback": {
+      "type": "string"
+    }
+  }
+}

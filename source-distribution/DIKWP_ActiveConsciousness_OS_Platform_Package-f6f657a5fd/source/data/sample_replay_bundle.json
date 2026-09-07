@@ -1,0 +1,18 @@
+{
+  "session_id": "demo_ac_001",
+  "claim_level": "C3 functional active-consciousness candidate; no phenomenal-consciousness claim",
+  "purpose_contract": "Help the user convert long-term ambition into a reversible first action.",
+  "DIKWP": {
+    "Data": "User delays submission after collecting too much material.",
+    "Information": "Repeated loop: accumulation without collapse.",
+    "Knowledge": "Start with minimal reversible draft.",
+    "Wisdom": "Protect agency and reduce evaluation fear.",
+    "Purpose": "Finish a first version while preserving long-term creativity."
+  },
+  "initiative_ticket": {
+    "proposed_move": "Write 5-sentence first version.",
+    "action_grade": "A2",
+    "approval_required": true
+  },
+  "landauer_budget": "Avoid public submission until reviewed; local draft is reversible."
+}

@@ -1,0 +1,91 @@
+openapi: 3.0.3
+info:
+  title: DIKWP ActiveConsciousness OS API
+  version: 0.1.0
+  description: Research prototype API for functional active artificial consciousness, DIKWP experience packets, collapse accumulation, purpose contracts, and action guardians.
+servers:
+  - url: https://api.example.org/ac-os/v1
+paths:
+  /sessions:
+    post:
+      summary: Create an active consciousness session
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/ActiveConsciousnessSession'
+      responses:
+        '201': { description: Created }
+  /packets/build:
+    post:
+      summary: Build a DIKWP experience packet from user context
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/HumanContextPacket'
+      responses:
+        '200':
+          description: DIKWP packet
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/DIKWPExperiencePacket'
+  /collapse/evaluate:
+    post:
+      summary: Evaluate repeated experience packets for collapse patterns
+      responses:
+        '200': { description: Collapse report }
+  /purpose/contracts:
+    post:
+      summary: Create or update a purpose contract
+      responses:
+        '200': { description: Purpose contract updated }
+  /initiatives/generate:
+    post:
+      summary: Generate proactive initiative tickets under safety constraints
+      responses:
+        '200': { description: Initiative tickets }
+  /actions/guard:
+    post:
+      summary: Grade and guard a proposed action
+      responses:
+        '200': { description: Action decision }
+  /replay/{session_id}:
+    get:
+      summary: Export replay bundle
+      parameters:
+        - name: session_id
+          in: path
+          required: true
+          schema: { type: string }
+      responses:
+        '200': { description: Replay bundle }
+components:
+  schemas:
+    ActiveConsciousnessSession:
+      type: object
+      required: [session_id, user_id, consent_scope]
+      properties:
+        session_id: { type: string }
+        user_id: { type: string }
+        consent_scope: { type: array, items: { type: string } }
+        claim_level: { type: string, enum: [C0, C1, C2, C3] }
+    HumanContextPacket:
+      type: object
+      properties:
+        context_text: { type: string }
+        explicit_purpose: { type: string }
+        autonomy_level: { type: string, enum: [A0, A1, A2, A3, A4, A5] }
+        sensitive_flags: { type: array, items: { type: string } }
+    DIKWPExperiencePacket:
+      type: object
+      properties:
+        data: { type: string }
+        information: { type: string }
+        knowledge: { type: string }
+        wisdom: { type: string }
+        purpose: { type: string }
+        residuals: { type: array, items: { type: string } }

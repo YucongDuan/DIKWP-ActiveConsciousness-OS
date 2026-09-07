@@ -1,0 +1,36 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "LandauerBudgetEntry",
+  "type": "object",
+  "required": [
+    "entry_id",
+    "irreversible_operation",
+    "cost_type",
+    "reversible_alternative"
+  ],
+  "properties": {
+    "entry_id": {
+      "type": "string"
+    },
+    "irreversible_operation": {
+      "type": "string"
+    },
+    "cost_type": {
+      "type": "string"
+    },
+    "reversible_alternative": {
+      "type": "string"
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high"
+      ]
+    },
+    "approved": {
+      "type": "boolean"
+    }
+  }
+}

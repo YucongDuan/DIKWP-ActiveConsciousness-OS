@@ -1,0 +1,52 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "CollapseRecord",
+  "type": "object",
+  "required": [
+    "collapse_id",
+    "pattern_statement",
+    "collapse_type",
+    "confidence"
+  ],
+  "properties": {
+    "collapse_id": {
+      "type": "string"
+    },
+    "source_packets": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "pattern_statement": {
+      "type": "string"
+    },
+    "collapse_type": {
+      "type": "string",
+      "enum": [
+        "constructive",
+        "stagnant_closure",
+        "catastrophic",
+        "parasitic",
+        "dissipative_chaos"
+      ]
+    },
+    "evidence_density": {
+      "type": "number"
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "counterexamples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "re_expansion_path": {
+      "type": "string"
+    }
+  }
+}

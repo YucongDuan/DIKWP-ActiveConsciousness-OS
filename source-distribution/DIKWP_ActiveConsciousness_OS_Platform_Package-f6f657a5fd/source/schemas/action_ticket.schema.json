@@ -1,0 +1,48 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ActionTicket",
+  "type": "object",
+  "required": [
+    "action_id",
+    "action",
+    "grade",
+    "approval_status"
+  ],
+  "properties": {
+    "action_id": {
+      "type": "string"
+    },
+    "action": {
+      "type": "string"
+    },
+    "target_system": {
+      "type": "string"
+    },
+    "grade": {
+      "type": "string",
+      "enum": [
+        "A0",
+        "A1",
+        "A2",
+        "A3",
+        "A4",
+        "A5"
+      ]
+    },
+    "preconditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rollback": {
+      "type": "string"
+    },
+    "approver": {
+      "type": "string"
+    },
+    "approval_status": {
+      "type": "string"
+    }
+  }
+}

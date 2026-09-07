@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "PurposeContract",
+  "type": "object",
+  "required": [
+    "purpose_id",
+    "purpose_statement",
+    "owner",
+    "scope",
+    "consent_level"
+  ],
+  "properties": {
+    "purpose_id": {
+      "type": "string"
+    },
+    "purpose_statement": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "scope": {
+      "type": "string"
+    },
+    "priority": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "conflicts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "consent_level": {
+      "type": "string"
+    },
+    "expiry": {
+      "type": "string"
+    }
+  }
+}

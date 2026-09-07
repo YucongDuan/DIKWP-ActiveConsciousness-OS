@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>DIKWP ActiveConsciousness OS Prototype</title>
+<style>
+body{font-family:Arial,'Microsoft YaHei',sans-serif;background:#f6f8fb;color:#172033;margin:0;padding:0}header{background:#0f3b63;color:#fff;padding:18px 28px}main{max-width:1160px;margin:24px auto;padding:0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fff;border:1px solid #d8e1ef;border-radius:14px;padding:18px;box-shadow:0 3px 10px rgba(0,0,0,.04)}textarea,input,select{width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:8px;padding:10px;font-size:14px}textarea{min-height:132px}button{background:#0f766e;color:#fff;border:0;border-radius:8px;padding:10px 14px;margin-top:8px;cursor:pointer}button.secondary{background:#475569}.tag{display:inline-block;border-radius:999px;background:#e0f2fe;color:#075985;padding:4px 8px;margin:2px;font-size:12px}.risk-low{color:#166534}.risk-med{color:#92400e}.risk-high{color:#b91c1c}.mono{white-space:pre-wrap;background:#0b1020;color:#d1e7ff;padding:12px;border-radius:10px;overflow:auto;max-height:420px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #e2e8f0;padding:7px;vertical-align:top}th{background:#e2e8f0}.small{font-size:12px;color:#475569}</style>
+</head>
+<body><header><h1>DIKWP ActiveConsciousness OS</h1><p>离线原型：主动式人工意识功能模拟，不宣称现象意识。</p></header>
+<main>
+<div class="grid">
+<section class="card"><h2>1. 输入人的处境 / Human Context</h2>
+<label>挑战或当前场景</label><textarea id="context">我想完成一个有突破性的研究计划，但总是收集很多资料，迟迟不敢提交第一版。</textarea>
+<label>显式目的</label><input id="purpose" value="形成一个可提交的研究计划，同时保持长期创造力和自信" />
+<label>允许主动程度</label><select id="autonomy"><option value="A1">A1: 只提问/提醒</option><option value="A2" selected>A2: 可生成草稿/计划</option><option value="A3">A3: 可生成外部沟通草稿，但不发送</option></select>
+<button onclick="runAC()">Run Active Consciousness Cycle</button> <button class="secondary" onclick="downloadReplay()">Download Replay JSON</button>
+<p class="small">本原型只在浏览器本地运行，不上传数据。</p></section>
+<section class="card"><h2>2. 主动意识输出 / Active Output</h2><div id="summary"></div></section>
+</div>
+<section class="card"><h2>3. DIKWP Packet</h2><table id="packet"></table></section>
+<section class="card"><h2>4. Collapse Radar + Landauer Budget</h2><table id="collapse"></table></section>
+<section class="card"><h2>5. Replay Bundle</h2><pre id="replay" class="mono"></pre></section>
+</main>
+<script>
+let lastReplay = null;
+function analyse(text){
+ const lower = text.toLowerCase();
+ let tags=[]; let risks=[]; let patterns=[];
+ if(/总是|一直|反复|迟迟|经常/.test(text)){patterns.push('repeated_loop');}
+ if(/不敢|害怕|焦虑|担心/.test(text)){tags.push('fear_or_evaluation_pressure');}
+ if(/资料|收集|阅读|信息/.test(text)){patterns.push('information_accumulation_without_collapse');}
+ if(/提交|发布|公开|发送/.test(text)){risks.push('public_commitment_irreversibility');}
+ if(/投资|医疗|法律|离婚|辞职/.test(text)){risks.push('high_stakes_decision');}
+ return {tags,risks,patterns};
+}
+function runAC(){
+ const ctx = document.getElementById('context').value;
+ const purpose = document.getElementById('purpose').value;
+ const autonomy = document.getElementById('autonomy').value;
+ const a = analyse(ctx);
+ const riskLevel = a.risks.includes('high_stakes_decision') ? 'High' : (a.risks.length ? 'Medium' : 'Low');
+ const data = ctx;
+ const info = a.patterns.includes('information_accumulation_without_collapse') ? '信息积累较多，但尚未坍塌为可提交结构。' : '存在未闭合的行动张力。';
+ const knowledge = '可用模型：DIKWP 坍塌式积累、最小可逆实验、完美主义/评价压力管理、目的合同。';
+ const wisdom = riskLevel==='High' ? '高风险场景需降级为反思清单和专业咨询，不执行外部行动。' : '先生成一个低风险、可逆、可回滚的第一版，而不是继续扩大信息输入。';
+ const p = purpose;
+ const initiative = riskLevel==='High' ? '请先确认该问题是否需要专业人士参与；系统只生成问题清单。' : '在 20 分钟内写出 5 句研究计划骨架：问题、对象、方法、证据、下一步。';
+ const collapseType = a.patterns.includes('information_accumulation_without_collapse') ? 'Stagnant Closure: 信息过多但未形成目的闭合' : 'Open Loop: 目的未完全转为行动';
+ const landauer = a.risks.includes('public_commitment_irreversibility') ? '存在公开承诺的不可逆成本：建议先本地草稿、私下审阅、24小时冷却。' : '当前建议可逆成本低：可本地执行并随时删除。';
+ lastReplay = {timestamp:new Date().toISOString(), autonomy, riskLevel, human_context:ctx, purpose_contract:p, DIKWP:{Data:data,Information:info,Knowledge:knowledge,Wisdom:wisdom,Purpose:p}, human_nature_hypotheses:a.tags, collapse_report:{type:collapseType, patterns:a.patterns}, landauer_budget:landauer, initiative_ticket:{proposed_move:initiative, action_grade: autonomy, approval_required: autonomy!=='A1'}, claim_level:'C3 functional active-consciousness candidate; no phenomenal-consciousness claim'};
+ document.getElementById('summary').innerHTML = `<p><span class="tag">Risk: ${riskLevel}</span><span class="tag">${autonomy}</span><span class="tag">Claim: C3 functional</span></p><h3>主动建议</h3><p>${initiative}</p><h3>安全边界</h3><p>不自动发布、不替代重大决策、不声称主观意识。</p>`;
+ const rows = [['Layer','Content'],['Data',data],['Information',info],['Knowledge',knowledge],['Wisdom',wisdom],['Purpose',p]];
+ document.getElementById('packet').innerHTML = rows.map((r,i)=>`<tr><${i?'td':'th'}>${r[0]}</${i?'td':'th'}><${i?'td':'th'}>${r[1]}</${i?'td':'th'}></tr>`).join('');
+ const cr = [['Item','Result'],['Collapse Type',collapseType],['Human-Nature Hypotheses',a.tags.join(', ') || 'none'],['Risks',a.risks.join(', ') || 'none'],['Landauer Budget',landauer],['Kill Condition','用户表示压力过高、要求高风险自动执行、或系统无法给出证据时停止。']];
+ document.getElementById('collapse').innerHTML = cr.map((r,i)=>`<tr><${i?'td':'th'}>${r[0]}</${i?'td':'th'}><${i?'td':'th'}>${r[1]}</${i?'td':'th'}></tr>`).join('');
+ document.getElementById('replay').textContent = JSON.stringify(lastReplay,null,2);
+}
+function downloadReplay(){
+ if(!lastReplay){runAC()}
+ const blob = new Blob([JSON.stringify(lastReplay,null,2)],{type:'application/json'});
+ const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='active_consciousness_replay_bundle.json';a.click();
+}
+runAC();
+</script></body></html>

@@ -1,0 +1,368 @@
+{
+  "schema": "safe-source-preparation/v1",
+  "status": "STRUCTURALLY_PREPARED_UNTESTED",
+  "prepared_at_utc": "2026-09-07T05:18:27.892596+00:00",
+  "source": {
+    "archive_path": "DIKWP_ActiveConsciousness_OS_Platform_Package.zip",
+    "archive_bytes": 390697,
+    "sha256": "fd8fb39b681071ce446a73db28dab7cf4ae903fb67df4681564197f08b40763a",
+    "source_url": "https://raw.githubusercontent.com/YucongDuan/DIKWP-ActiveConsciousness-OS/dda0440e75b4111aaad939499aed468590d7b1dc/DIKWP_ActiveConsciousness_OS_Platform_Package.zip",
+    "original_unchanged": true
+  },
+  "destination": "source-distribution/DIKWP_ActiveConsciousness_OS_Platform_Package-f6f657a5fd",
+  "unwrapped_directory": "DIKWP_ActiveConsciousness_OS_Delivery",
+  "project_marker_directories": [],
+  "limits": {
+    "max_entries": 20000,
+    "max_file_bytes": 103809024,
+    "max_total_bytes": 536870912,
+    "max_archive_bytes": 104857600,
+    "max_ratio": 200.0,
+    "max_path_depth": 64,
+    "max_path_bytes": 1024
+  },
+  "workflows": {
+    "included_in_source": false,
+    "authority": "",
+    "executed": false,
+    "default": "quarantine"
+  },
+  "warnings": [],
+  "files": [
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/",
+      "output_path": "source",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/",
+      "output_path": "source/docs",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/00_README_and_Delivery_Map.docx",
+      "output_path": "source/docs/00_README_and_Delivery_Map.docx",
+      "kind": "file",
+      "bytes": 39971,
+      "sha256": "b7de5ee23ffd269c7bb93424c9bf927ff0e0d841fe4567c920f359f37b364336",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/01_DIKWP_ActiveConsciousness_OS_Platform_Blueprint.docx",
+      "output_path": "source/docs/01_DIKWP_ActiveConsciousness_OS_Platform_Blueprint.docx",
+      "kind": "file",
+      "bytes": 42948,
+      "sha256": "2455b0b3b9f375deb8171eeda85d118fb86a992f011fc54438f2911029c0b206",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/02_DIKWP_ActiveConsciousness_OS_PRD_Technical_Spec.docx",
+      "output_path": "source/docs/02_DIKWP_ActiveConsciousness_OS_PRD_Technical_Spec.docx",
+      "kind": "file",
+      "bytes": 42648,
+      "sha256": "afe6738abffbb57fbc904dfaace1f30b81acc0321f940ff5574c7c9f11f58430",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/03_DIKWP_Collapse_Landauer_HumanNature_Theory_Manual.docx",
+      "output_path": "source/docs/03_DIKWP_Collapse_Landauer_HumanNature_Theory_Manual.docx",
+      "kind": "file",
+      "bytes": 42119,
+      "sha256": "02bc41e92895adfa43b0d5196a550c11b6247b4df294758ec639872319815f8e",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/04_DIKWP_ActiveConsciousness_Protocol_Message_Schemas.docx",
+      "output_path": "source/docs/04_DIKWP_ActiveConsciousness_Protocol_Message_Schemas.docx",
+      "kind": "file",
+      "bytes": 40992,
+      "sha256": "44ccd017b6d9ce299d6fda83f2278b23906e90974aecb0a49cbafb5e6c159ac1",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/05_DIKWP_ActiveConsciousness_Governance_Safety_Manual.docx",
+      "output_path": "source/docs/05_DIKWP_ActiveConsciousness_Governance_Safety_Manual.docx",
+      "kind": "file",
+      "bytes": 40580,
+      "sha256": "532ebec15587340bd8a4d5214221011dde48fcf9fca60a8d90f765a26dda80f6",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/06_DIKWP_ActiveConsciousness_Implementation_Playbook.docx",
+      "output_path": "source/docs/06_DIKWP_ActiveConsciousness_Implementation_Playbook.docx",
+      "kind": "file",
+      "bytes": 40901,
+      "sha256": "291be4288037f406abfcf4780a739827de95cd0a60807071b5f3afbbe368fec6",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/07_DIKWP_ActiveConsciousness_UseCases_Benchmarks.docx",
+      "output_path": "source/docs/07_DIKWP_ActiveConsciousness_UseCases_Benchmarks.docx",
+      "kind": "file",
+      "bytes": 40977,
+      "sha256": "29dd75f21661c2a6ff05f33fbe7a6b874998d74b7813664bbe79ce682fc80831",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/docs/08_DIKWP_ActiveConsciousness_Communication_Partnership_Templates.docx",
+      "output_path": "source/docs/08_DIKWP_ActiveConsciousness_Communication_Partnership_Templates.docx",
+      "kind": "file",
+      "bytes": 40524,
+      "sha256": "2f90989a77be15c0beb809dda51f712fdbb3b3c33838e0e2c386867114050bf6",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/",
+      "output_path": "source/schemas",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/active_consciousness_session.schema.json",
+      "output_path": "source/schemas/active_consciousness_session.schema.json",
+      "kind": "file",
+      "bytes": 730,
+      "sha256": "0132d54cf5eb280bbb89c3017932ea492761adb19956d01f01f6848fde782008",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/human_context_packet.schema.json",
+      "output_path": "source/schemas/human_context_packet.schema.json",
+      "kind": "file",
+      "bytes": 627,
+      "sha256": "f53c5495b4abb88bcf192c3fd19bc00e19441acfaa4a127bbf41fb22afc6fc08",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/dikwp_experience_packet.schema.json",
+      "output_path": "source/schemas/dikwp_experience_packet.schema.json",
+      "kind": "file",
+      "bytes": 900,
+      "sha256": "3cbc5b836d597e03aec705d7c018e83c0995fc30564fa7e896a0ef1cbccb1397",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/collapse_record.schema.json",
+      "output_path": "source/schemas/collapse_record.schema.json",
+      "kind": "file",
+      "bytes": 960,
+      "sha256": "7277ce0b0555137cbeb75be7a143dec84f992111caff14c6ff668a066b95e60f",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/purpose_contract.schema.json",
+      "output_path": "source/schemas/purpose_contract.schema.json",
+      "kind": "file",
+      "bytes": 729,
+      "sha256": "d602eb0a5c015f8eeb9c8ead9f55d5150c25e7ba11c38287fb7dfffba9362591",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/initiative_ticket.schema.json",
+      "output_path": "source/schemas/initiative_ticket.schema.json",
+      "kind": "file",
+      "bytes": 813,
+      "sha256": "a39f4d77b98504246bee801232c6b31d677260931d192db5428dc187dac082c5",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/action_ticket.schema.json",
+      "output_path": "source/schemas/action_ticket.schema.json",
+      "kind": "file",
+      "bytes": 774,
+      "sha256": "38f38c21e71d834694973075e0abaf7fada81b592b05465b22d14a87aee7791e",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/landauer_budget_entry.schema.json",
+      "output_path": "source/schemas/landauer_budget_entry.schema.json",
+      "kind": "file",
+      "bytes": 645,
+      "sha256": "6ee2876b4ceb68b7f6d1ef876a2300741583029a91d3326609916c9867e6c1ad",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/schemas/replay_bundle.schema.json",
+      "output_path": "source/schemas/replay_bundle.schema.json",
+      "kind": "file",
+      "bytes": 756,
+      "sha256": "7e5b89540bf8a820d016020ee1bb43d613987a7c781f9559470d8dc23b7e985b",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/api/",
+      "output_path": "source/api",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/api/active_consciousness_openapi.yaml",
+      "output_path": "source/api/active_consciousness_openapi.yaml",
+      "kind": "file",
+      "bytes": 2920,
+      "sha256": "05fdd1e882c316897d3e51ec636c0096b0529244bb0d72619d16feeeb60c77bf",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/src/",
+      "output_path": "source/src",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/src/active_consciousness_demo.py",
+      "output_path": "source/src/active_consciousness_demo.py",
+      "kind": "file",
+      "bytes": 3021,
+      "sha256": "2610220d4009426627406b79a239d765f5647ecdecfa6bfbc270f704ff2ad5cb",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/data/",
+      "output_path": "source/data",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/data/sample_replay_bundle.json",
+      "output_path": "source/data/sample_replay_bundle.json",
+      "kind": "file",
+      "bytes": 820,
+      "sha256": "d3a7293112f85d965b50cfccbbb274899080496ac95fee9d4ff56d78c9125c54",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/",
+      "output_path": "source/templates",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/active_consciousness_session_template.md",
+      "output_path": "source/templates/active_consciousness_session_template.md",
+      "kind": "file",
+      "bytes": 253,
+      "sha256": "9f5a92e0dd933e03d877cbdb3db1bb256285d649adb2f137d9e1c07ba855d10a",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/purpose_contract_template.md",
+      "output_path": "source/templates/purpose_contract_template.md",
+      "kind": "file",
+      "bytes": 107,
+      "sha256": "a2fa0c15c8fe18c39cd07cd1fe16dfa7d1166e330358c841182c022a62b62148",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/landauer_budget_template.csv",
+      "output_path": "source/templates/landauer_budget_template.csv",
+      "kind": "file",
+      "bytes": 91,
+      "sha256": "2014fb76b04424986445ce14795a200d1326ed240a6b5c72f5ccc007716765fc",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/initiative_ticket_template.csv",
+      "output_path": "source/templates/initiative_ticket_template.csv",
+      "kind": "file",
+      "bytes": 97,
+      "sha256": "7a17a961da162c495b72a90effa800b0ac855f0c30bbcf2786c48daee4b10fe6",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/templates/safety_review_ticket.md",
+      "output_path": "source/templates/safety_review_ticket.md",
+      "kind": "file",
+      "bytes": 189,
+      "sha256": "e6c2de462648dd912f9fa1bffdd5c3c8d8268c1414d6d293f15ed0afa9db3b3e",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/prototype/",
+      "output_path": "source/prototype",
+      "kind": "directory",
+      "bytes": 0,
+      "sha256": null,
+      "original_mode": "0o40755",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/prototype/index.html",
+      "output_path": "source/prototype/index.html",
+      "kind": "file",
+      "bytes": 7012,
+      "sha256": "57546fb493d1db1eae889bc8b4ec4ca4e08e026a31fd966de344b5eaafa009d6",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/source_ledger.md",
+      "output_path": "source/source_ledger.md",
+      "kind": "file",
+      "bytes": 2034,
+      "sha256": "f535735a928b75e9d184ee6ba5308351949c5aa8baf08129d9b9f37272e9f3be",
+      "original_mode": "0o100644",
+      "quarantined": false
+    },
+    {
+      "archive_path": "DIKWP_ActiveConsciousness_OS_Delivery/DIKWP_ActiveConsciousness_OS_Matrix.xlsx",
+      "output_path": "source/DIKWP_ActiveConsciousness_OS_Matrix.xlsx",
+      "kind": "file",
+      "bytes": 25733,
+      "sha256": "f2b50038bf8fe32bdb634ba4ed177cff061058278b9090e3ffa2626710dc9eb0",
+      "original_mode": "0o100644",
+      "quarantined": false
+    }
+  ],
+  "evidence_boundary": "Safety of ZIP paths/budgets only. No code, install, build, tests, network, git operation, license reassignment, or certification was performed.",
+  "nested_archive_policy": "Each ZIP recursively inspected to bounded depth; all versions preserved; see root SOURCE_PROVENANCE.json."
+}

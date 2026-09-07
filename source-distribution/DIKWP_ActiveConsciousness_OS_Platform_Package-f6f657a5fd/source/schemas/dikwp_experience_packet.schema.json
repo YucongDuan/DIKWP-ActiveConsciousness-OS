@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "DIKWPExperiencePacket",
+  "type": "object",
+  "required": [
+    "packet_id",
+    "data",
+    "information",
+    "knowledge",
+    "wisdom",
+    "purpose"
+  ],
+  "properties": {
+    "packet_id": {
+      "type": "string"
+    },
+    "observer_boundary": {
+      "type": "object"
+    },
+    "data": {
+      "type": "string"
+    },
+    "information": {
+      "type": "string"
+    },
+    "knowledge": {
+      "type": "string"
+    },
+    "wisdom": {
+      "type": "string"
+    },
+    "purpose": {
+      "type": "string"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "residuals": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "kill_conditions": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  }
+}
