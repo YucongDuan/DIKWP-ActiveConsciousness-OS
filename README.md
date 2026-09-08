@@ -1,10 +1,12 @@
 # DIKWP-ActiveConsciousness-OS
 
+Created by Yucong Duan (段玉聪).
+
 
 <!-- DIKWP-SOURCE-VISIBILITY-START -->
 ## Browse source / 浏览源码
 
-[Source index / 源码入口](SOURCE_INDEX.md) expands the retained archive distribution into browsable files, with archive hashes and per-project provenance. Runtime tests: **NOT_RUN**.
+[Source index / 源码入口](SOURCE_INDEX.md) expands the retained archive distribution into browsable files, with archive hashes and per-project provenance. Runtime tests: NOT_RUN.
 
 原始压缩包 保留；新增可浏览源码、哈希与来源记录。运行与测试尚未执行，详情见源码入口。
 <!-- DIKWP-SOURCE-VISIBILITY-END -->
@@ -19,3 +21,7 @@ Research navigation, not verified software dependencies. / 研究导航，不代
 - [WORLDLOOM](https://github.com/YucongDuan/WORLDLOOM)
 - [DIKWP-ConsciousEvolution-CoEvolution-OS-2026-V1](https://github.com/YucongDuan/DIKWP-ConsciousEvolution-CoEvolution-OS-2026-V1)
 - [DIKWP-Xperience-OS-v1.0](https://github.com/YucongDuan/DIKWP-Xperience-OS-v1.0)
+
+## Current interface presentation
+
+[Open the interface source](source-distribution/DIKWP_ActiveConsciousness_OS_Platform_Package-f6f657a5fd/source/prototype/index.html) from the current repository download. See [interface and authorship notes](INTERFACE_NOTES.md) for English coverage, report generation and validation scope.

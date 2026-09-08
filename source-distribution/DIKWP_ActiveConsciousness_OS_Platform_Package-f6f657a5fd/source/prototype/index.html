@@ -1,22 +1,24 @@
 <!doctype html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>DIKWP ActiveConsciousness OS Prototype</title>
 <style>
 body{font-family:Arial,'Microsoft YaHei',sans-serif;background:#f6f8fb;color:#172033;margin:0;padding:0}header{background:#0f3b63;color:#fff;padding:18px 28px}main{max-width:1160px;margin:24px auto;padding:0 18px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px}.card{background:#fff;border:1px solid #d8e1ef;border-radius:14px;padding:18px;box-shadow:0 3px 10px rgba(0,0,0,.04)}textarea,input,select{width:100%;box-sizing:border-box;border:1px solid #cbd5e1;border-radius:8px;padding:10px;font-size:14px}textarea{min-height:132px}button{background:#0f766e;color:#fff;border:0;border-radius:8px;padding:10px 14px;margin-top:8px;cursor:pointer}button.secondary{background:#475569}.tag{display:inline-block;border-radius:999px;background:#e0f2fe;color:#075985;padding:4px 8px;margin:2px;font-size:12px}.risk-low{color:#166534}.risk-med{color:#92400e}.risk-high{color:#b91c1c}.mono{white-space:pre-wrap;background:#0b1020;color:#d1e7ff;padding:12px;border-radius:10px;overflow:auto;max-height:420px}table{width:100%;border-collapse:collapse}td,th{border:1px solid #e2e8f0;padding:7px;vertical-align:top}th{background:#e2e8f0}.small{font-size:12px;color:#475569}</style>
+<meta name="author" content="Yucong Duan (段玉聪)">
 </head>
-<body><header><h1>DIKWP ActiveConsciousness OS</h1><p>离线原型：主动式人工意识功能模拟，不宣称现象意识。</p></header>
+<body><header><h1>DIKWP ActiveConsciousness OS</h1>
+<p data-project-creator="true" style="font-size:.9rem;line-height:1.5;opacity:.85;margin:.5rem 0 1rem">Created by Yucong Duan (段玉聪).</p><p>Offline prototype: a functional simulation of proactive artificial consciousness, without claims of phenomenal consciousness.</p></header>
 <main>
 <div class="grid">
-<section class="card"><h2>1. 输入人的处境 / Human Context</h2>
-<label>挑战或当前场景</label><textarea id="context">我想完成一个有突破性的研究计划，但总是收集很多资料，迟迟不敢提交第一版。</textarea>
-<label>显式目的</label><input id="purpose" value="形成一个可提交的研究计划，同时保持长期创造力和自信" />
-<label>允许主动程度</label><select id="autonomy"><option value="A1">A1: 只提问/提醒</option><option value="A2" selected>A2: 可生成草稿/计划</option><option value="A3">A3: 可生成外部沟通草稿，但不发送</option></select>
+<section class="card"><h2>Human Context</h2>
+<label>Challenge or current scenario</label><textarea id="context">我想完成一个有突破性的研究计划，但总是收集很多资料，迟迟不敢提交第一版。</textarea>
+<label>Explicit purpose</label><input id="purpose" value="形成一个可提交的研究计划，同时保持长期创造力和自信" />
+<label>Permitted initiative</label><select id="autonomy"><option value="A1">A1: 只提问/提醒</option><option value="A2" selected>A2: 可生成草稿/计划</option><option value="A3">A3: 可生成外部沟通草稿，但不发送</option></select>
 <button onclick="runAC()">Run Active Consciousness Cycle</button> <button class="secondary" onclick="downloadReplay()">Download Replay JSON</button>
-<p class="small">本原型只在浏览器本地运行，不上传数据。</p></section>
-<section class="card"><h2>2. 主动意识输出 / Active Output</h2><div id="summary"></div></section>
+<p class="small">This prototype runs locally in the browser and uploads no data.</p></section>
+<section class="card"><h2>Active Output</h2><div id="summary"></div></section>
 </div>
 <section class="card"><h2>3. DIKWP Packet</h2><table id="packet"></table></section>
 <section class="card"><h2>4. Collapse Radar + Landauer Budget</h2><table id="collapse"></table></section>
@@ -62,4 +64,121 @@ function downloadReplay(){
  const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='active_consciousness_replay_bundle.json';a.click();
 }
 runAC();
-</script></body></html>
+</script>
+<script id="yd-interface-config" type="application/json">{"messages":{"决策":"Decision","1. 输入人的处境 / Human Context":"Human Context","2. 主动意识输出 / Active Output":"Active Output","模型":"Model","信息积累较多，但尚未坍塌为可提交结构。":"Substantial information has accumulated without forming a submittable structure.","存在未闭合的行动张力。":"The intended action remains unresolved.","可用模型：DIKWP 坍塌式积累、最小可逆实验、完美主义/评价压力管理、目的合同。":"Available models: DIKWP accumulation and consolidation, minimally reversible experiments, management of perfectionism and evaluation pressure, and purpose contracts.","高风险场景需降级为反思清单和专业咨询，不执行外部行动。":"High-risk scenarios are limited to reflection checklists and professional consultation; no external actions are performed.","先生成一个低风险、可逆、可回滚的第一版，而不是继续扩大信息输入。":"Produce a low-risk, reversible first version with rollback, before gathering more information.","请先确认该问题是否需要专业人士参与；系统只生成问题清单。":"Check whether this issue requires professional involvement; the system generates questions only.","在 20 分钟内写出 5 句研究计划骨架：问题、对象、方法、证据、下一步。":"Within 20 minutes, write a five-sentence research outline: question, subject, method, evidence and next step.","Stagnant Closure: 信息过多但未形成目的闭合":"Stagnant closure: information has not formed a purpose-bounded result","Open Loop: 目的未完全转为行动":"Open loop: purpose has not fully become action","存在公开承诺的不可逆成本：建议先本地草稿、私下审阅、24小时冷却。":"Public commitments carry irreversible costs. Start with a local draft, private review and a 24-hour cooling period.","当前建议可逆成本低：可本地执行并随时删除。":"The current proposal has low reversal costs; it can be tried locally and removed.","用户表示压力过高、要求高风险自动执行、或系统无法给出证据时停止。":"Stop if the user reports excessive pressure, requests high-risk automatic execution or the system cannot provide evidence.","主动建议":"Proposed next step","安全边界":"Safety boundaries","不自动发布、不替代重大决策、不声称主观意识。":"No automatic publication, substitution for consequential decisions or claims of subjective consciousness.","小时":"Hours","证据":"Evidence","目的":"Purpose","数据":"Data","允许":"Allowed","生成":"Generate","当前":"Current","对象":"Object","公开":"Public","风险":"Risk","停止":"Stop","扩大":"Expanding","系统":"System","结构":"Structure","建议":"Advice","离线原型：主动式人工意识功能模拟，不宣称现象意识。":"Offline prototype: a functional simulation of proactive artificial consciousness, without claims of phenomenal consciousness.","挑战或当前场景":"Challenge or current scenario","我想完成一个有突破性的研究计划，但总是收集很多资料，迟迟不敢提交第一版。":"I want to complete an ambitious research plan, but keep collecting material and hesitate to submit a first draft.","显式目的":"Explicit purpose","允许主动程度":"Permitted initiative","A1: 只提问/提醒":"A1: Questions and reminders only","A2: 可生成草稿/计划":"A2: Drafts and plans permitted","A3: 可生成外部沟通草稿，但不发送":"A3: External communication drafts permitted; no sending","本原型只在浏览器本地运行，不上传数据。":"This prototype runs locally in the browser and uploads no data.","问题":"Question","边界":"Scope"}}</script>
+<script>
+/* Interface localization. Creator: Yucong Duan (段玉聪). */
+(() => {
+  'use strict';
+  const configuration = document.getElementById('yd-interface-config');
+  if (!configuration) return;
+  const config = JSON.parse(configuration.textContent);
+  const dictionary = new Map(Object.entries(config.messages || {}).map(([a, b]) => [a.trim().replace(/\s+/g, ' '), b]));
+  const numeric = /\d[\d,]*(?:\.\d+)?/g;
+  const templates = [];
+  const escapePattern = value => value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  for (const [source, target] of dictionary) {
+    const a = source.match(numeric) || [], b = target.match(numeric) || [];
+    if (!a.length || a.length > 12 || a.length !== b.length || !a.every((v, i) => v.replace(/,/g, '') === b[i].replace(/,/g, ''))) continue;
+    const parts = source.split(numeric);
+    templates.push({pattern: new RegExp('^' + parts.map(escapePattern).join('(\\d[\\d,]*(?:\\.\\d+)?)') + '$'), parts: target.split(numeric)});
+  }
+  const textState = new WeakMap();
+  const attributeState = new WeakMap();
+  const attributes = ['title', 'placeholder', 'aria-label', 'alt', 'label'];
+  const excluded = 'script,style,pre,code,textarea,[contenteditable],[data-source-language],[data-project-creator]';
+  let language = 'en';
+  const originalTitle = document.title;
+
+  function translate(value) {
+    const key = value.trim().replace(/\s+/g, ' ');
+    let translated = dictionary.get(key);
+    if (translated === undefined && /[\u3400-\u9fff]/.test(key)) {
+      for (const template of templates) {
+        const match = key.match(template.pattern);
+        if (!match) continue;
+        translated = template.parts.map((part, i) => part + (match[i + 1] || '')).join('');
+        break;
+      }
+    }
+    if (translated === undefined) return value;
+    const leading = value.match(/^\s*/)[0];
+    const trailing = value.match(/\s*$/)[0];
+    return leading + translated + trailing;
+  }
+
+  function updateText(node) {
+    const parent = node.parentElement;
+    if (!parent || parent.closest(excluded)) return;
+    let saved = textState.get(node);
+    const current = node.nodeValue;
+    if (!saved || current !== saved.rendered) saved = { original: current, rendered: current };
+    const next = language === 'en' ? translate(saved.original) : saved.original;
+    if (next !== current) {
+      // Translating an option label must not change the value used by the application.
+      if (parent.tagName === 'OPTION' && !parent.hasAttribute('value')) parent.setAttribute('value', parent.textContent);
+      node.nodeValue = next;
+    }
+    saved.rendered = next;
+    textState.set(node, saved);
+  }
+
+  function updateAttributes(element) {
+    if (!element || element.closest(excluded)) return;
+    let saved = attributeState.get(element);
+    if (!saved) { saved = new Map(); attributeState.set(element, saved); }
+    for (const name of attributes) {
+      if (!element.hasAttribute(name)) continue;
+      // The label attribute is an interface label on these elements only.
+      if (name === 'label' && !['OPTION', 'OPTGROUP', 'TRACK'].includes(element.tagName)) continue;
+      const current = element.getAttribute(name);
+      let prior = saved.get(name);
+      if (!prior || current !== prior.rendered) prior = { original: current, rendered: current };
+      const next = language === 'en' ? translate(prior.original) : prior.original;
+      if (next !== current) element.setAttribute(name, next);
+      prior.rendered = next; saved.set(name, prior);
+    }
+  }
+
+  function visit(root) {
+    if (root.nodeType === Node.TEXT_NODE) { updateText(root); return; }
+    if (root.nodeType !== Node.ELEMENT_NODE || root.closest(excluded)) return;
+    updateAttributes(root);
+    const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT);
+    while (walker.nextNode()) updateText(walker.currentNode);
+    for (const element of root.querySelectorAll('[title],[placeholder],[aria-label],[alt],[label]')) updateAttributes(element);
+  }
+
+  function setLanguage(next) {
+    language = next === 'zh' ? 'zh' : 'en';
+    document.documentElement.lang = language === 'zh' ? 'zh-CN' : 'en';
+    document.title = language === 'en' ? translate(originalTitle) : originalTitle;
+    visit(document.body);
+  }
+
+  function start() {
+    const select = config.nativeSelect ? document.querySelector(config.nativeSelect) : null;
+    const button = config.nativeButton ? document.querySelector(config.nativeButton) : null;
+    if (select) language = select.value === 'zh' ? 'zh' : 'en';
+    else if (config.storageKey) {
+      try { language = localStorage.getItem(config.storageKey) === 'zh' ? 'zh' : 'en'; } catch (_) { language = 'en'; }
+    }
+    setLanguage(language);
+    if (select) select.addEventListener('change', () => setLanguage(select.value));
+    if (button) button.addEventListener('click', () => setLanguage(language === 'en' ? 'zh' : 'en'));
+    const observer = new MutationObserver(records => {
+      for (const record of records) {
+        if (record.type === 'characterData') updateText(record.target);
+        else if (record.type === 'attributes') updateAttributes(record.target);
+        else for (const node of record.addedNodes) visit(node);
+      }
+    });
+    observer.observe(document.body, { childList: true, subtree: true, characterData: true, attributes: true, attributeFilter: attributes });
+  }
+
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start, { once: true });
+  else start();
+})();
+
+</script>
+</body></html>
